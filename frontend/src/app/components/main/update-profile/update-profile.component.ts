@@ -44,4 +44,7 @@ export class UpdateProfileComponent implements OnInit {
     this.router.navigate(['/main']);
   }
 
+  onSubmit() {
+    console.log(this.profileDataForm.value);
+  }
 }
