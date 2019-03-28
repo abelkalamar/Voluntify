@@ -18,7 +18,7 @@ const routes: Routes = [
     path: 'main', component: MainComponent, children: [
       { path: '', component: EventListComponent },
       { path: 'event/list', component: EventListComponent },
-      { path: 'event/detail', component: EventDetailComponent },
+      { path: 'event/detail/:id', component: EventDetailComponent },
       { path: 'profile', component: UpdateProfileComponent },
     ]
   },
