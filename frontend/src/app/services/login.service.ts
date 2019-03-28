@@ -1,9 +1,46 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  constructor() { }
+  baseUrl = environment.baseUrlLili;
+
+  constructor(
+    private http: HttpClient,
+    private router: Router
+  ) { }
+
+  register(userData: { email: string, password: string, type: string }): void {
+    console.log(userData);
+    const headers: HttpHeaders = new HttpHeaders()
+      .set('Content-Type', 'application/json');
+    this.http.post<Object>(`${this.baseUrl}/api/user/register`, {
+      email: userData.email,
+      password: userData.password,
+      type: userData.type
+    }, { headers })
+      .subscribe(data => {
+        console.log(data);
+      });
+  }
+
+  login(userData: { email: string, password: string }): void {
+    const headers: HttpHeaders = new HttpHeaders()
+      .set('Content-Type', 'application/json')
+      .set('X-Requested-With', 'XMLHttpRequest');
+    this.http.post<Object>(`${this.baseUrl}/api/auth/login`, {
+      email: userData.email,
+      password: userData.password
+    }, { headers })
+      .subscribe((data: { token: string }) => {
+        window.localStorage.setItem('token', data.token);
+        console.log(data);
+        this.router.navigate(['/main']);
+      });
+  }
 }

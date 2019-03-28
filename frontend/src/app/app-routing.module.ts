@@ -6,11 +6,14 @@ import { MainComponent } from './components/main/main.component';
 import { EventListComponent } from './components/main/event-list/event-list.component';
 import { EventDetailComponent } from './components/main/event-detail/event-detail.component';
 import { UpdateProfileComponent } from './components/main/update-profile/update-profile.component';
+import { CreateEventComponent } from './components/comp-main/create-event/create-event.component';
+import { SearchPeopleComponent } from './components/comp-main/search-people/search-people.component';
+import { PersonDetailComponent } from './components/comp-main/person-detail/person-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
+  { path: 'register/:type', component: RegisterComponent },
   {
     path: 'main', component: MainComponent, children: [
       { path: '', component: EventListComponent },
@@ -19,7 +22,15 @@ const routes: Routes = [
       { path: 'profile', component: UpdateProfileComponent },
     ]
   },
+  {
+    path: 'comp/main', component: MainComponent, children: [
+      { path: 'event/create', component: CreateEventComponent },
+      { path: 'search', component: SearchPeopleComponent },
+      { path: 'user/detail', component: PersonDetailComponent },
+    ]
+  },
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
