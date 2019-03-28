@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { LoginService } from 'src/app/services/login.service';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,6 +15,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private logService: LoginService,
+    private router: Router
     ) { }
 
   ngOnInit() {
@@ -24,7 +26,9 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    this.logService.login(this.loginForm.value);
+    // this.logService.login(this.loginForm.value);
+    this.router.navigate(['/main']);
+    console.log('ok');
   }
 
 }
