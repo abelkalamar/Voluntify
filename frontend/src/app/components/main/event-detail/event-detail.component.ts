@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { EventService } from 'src/app/services/event.service';
-import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-event-detail',
@@ -9,6 +8,7 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./event-detail.component.scss']
 })
 export class EventDetailComponent implements OnInit {
+  valid = false;
   eventId: number;
   event = {id: this.eventId,
     title: 'First title',
@@ -21,12 +21,26 @@ export class EventDetailComponent implements OnInit {
       }
     });
   }
+  changeEvent(event) {
+    if (event.target.checked) {
+        this.valid = true;
+    } else {
+        this.valid = false;
+    }
+}
 
   ngOnInit() {
-    this.eventService.getEventById(this.eventId);
-    //.subscribe(event => {
-    // this.event = event;
-    //})
+    this.eventService.getEventById(this.eventId)
+    // .subscribe(event => {
+    // console.log(event);
+    // })
+  }
+
+  apply() {
+    this.eventService.applyEvent(this.eventId);
+    // .subscribe(res => {
+      this.router.navigate(['/main/event/list']);
+    // });
   }
 
 }

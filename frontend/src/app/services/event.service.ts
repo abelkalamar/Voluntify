@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-// import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 
 
@@ -16,7 +15,7 @@ export class EventService {
     const headers: HttpHeaders = new HttpHeaders()
       .set('Authorization', `Bearer ${window.localStorage.getItem('token')}`);
     console.log('all events');
-    // return this.http.get(`${this.baseUrl}/`, { headers });
+    return this.http.get(`${this.baseUrl}/api/event/all`, { headers });
   }
   getUserEvents() {
     const headers: HttpHeaders = new HttpHeaders()
@@ -28,6 +27,12 @@ export class EventService {
     const headers: HttpHeaders = new HttpHeaders()
       .set('Authorization', `Bearer ${window.localStorage.getItem('token')}`);
     console.log('get detailed events');
-    // return this.http.get(`${this.baseUrl}/id`, { headers });
+    // return this.http.get(`${this.baseUrl}/api/event/id`, { headers });
+  }
+  applyEvent(id: number) {
+    const headers: HttpHeaders = new HttpHeaders()
+      .set('Authorization', `Bearer ${window.localStorage.getItem('token')}`);
+    console.log('applied');
+    //return this.http.post(`${this.baseUrl}/api/event/id`, {id: id}, { headers } )
   }
 }
