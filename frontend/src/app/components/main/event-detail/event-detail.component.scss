@@ -24,14 +24,31 @@
         outline: none;
       }
     }
-    .apply{
-      width: 100px;
-      margin: 20px 0;
-    }
+
     .content {
       font-family: "Quicksand", sans-serif;
       text-align: justify;
       color: black;
+    }
+    .checkbox {
+      display: flex;
+      justify-items: flex-start;
+      align-items: flex-start;
+      margin-top: 20px;
+      font-family: "Quicksand", sans-serif;
+      input {
+        width: 5%;
+      }
+    }
+    .apply {
+      width: 100px;
+      margin: 10px 0;
+      padding: 5px;
+      border-radius: 5px;
+      font-size: 18px;
+      &:focus {
+        outline: none;
+      }
     }
   }
 }

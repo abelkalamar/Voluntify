@@ -5,10 +5,10 @@
   <div class="right-side">
     <h1 class="title">{{ event.title }}</h1>
     <p class="content">{{ event.content }}</p>
-    <form>
-      <input type="checkbox" value="accept" required>I accept the terms and conditions. 
-      <input class="apply" type="button" value="apply">
-    </form>
+    <div class="checkbox">
+      <input type="checkbox" (change)="changeEvent($event)">I accept the terms and conditions.
+    </div>
+    <input class="apply" type="submit" value="apply" [disabled]="!valid" (click)="apply()">
   </div>
 
 </div>
