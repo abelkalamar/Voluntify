@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -34,5 +35,18 @@ export class EventService {
       .set('Authorization', `Bearer ${window.localStorage.getItem('token')}`);
     console.log('applied');
     //return this.http.post(`${this.baseUrl}/api/event/id`, {id: id}, { headers } )
+  }
+
+  createEvent(eventData):Observable<any> {
+    const body = {
+      title: eventData.title,
+      description: eventData.description,
+      address: eventData.address,
+      start: eventData.start,
+      finish: eventData.finish
+    }
+    const headers: HttpHeaders = new HttpHeaders()
+      .set('Authorization', `Bearer ${window.localStorage.getItem('token')}`);
+    return this.http.post(`${this.baseUrl}/api/event`, body, { headers } );
   }
 }

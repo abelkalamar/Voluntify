@@ -30,7 +30,6 @@ export class LoginService {
   }
 
   login(userData: { email: string, password: string }): void {
-    console.log('ok');
     const headers: HttpHeaders = new HttpHeaders()
       .set('Content-Type', 'application/json')
       .set('X-Requested-With', 'XMLHttpRequest');
@@ -40,7 +39,8 @@ export class LoginService {
     }, { headers })
       .subscribe((data: { token: string, role: string }) => {
         window.localStorage.setItem('token', data.token);
-        if (data.role === 'ROLE_COMPANY') {
+        console.log(data.role);
+        if (data.role === '[ROLE_COMPANY]') {
           this.router.navigate(['/comp/main']);
         } else {
           this.router.navigate(['/main']);

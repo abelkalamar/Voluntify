@@ -24,7 +24,7 @@ const routes: Routes = [
   },
   {
     path: 'comp/main', component: MainComponent, children: [
-      { path: '', component: SearchPeopleComponent },
+      { path: '', redirectTo: 'event/create', pathMatch: 'full' },
       { path: 'event/create', component: CreateEventComponent },
       { path: 'search', component: SearchPeopleComponent },
       { path: 'user/detail/:eventId', component: PersonDetailComponent },
