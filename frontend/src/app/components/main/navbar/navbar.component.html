@@ -1,3 +1,12 @@
-<p>
-  navbar works!
-</p>
+<div class="navbar">
+  <div class="logo"></div>
+  <div class="menu-container">
+    <a routerLink="">My events</a>
+    <a routerLink="">My profile</a>
+    <a routerLink="">Contact us</a>
+  </div>
+  <div class="user-container">
+      <img class="profile-photo" src="{{loggedInUser.profilePicture}}">
+      <h3 class="user-name">{{loggedInUser.username}}</h3>
+  </div>
+</div>

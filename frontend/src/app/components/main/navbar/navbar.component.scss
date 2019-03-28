@@ -1,0 +1,35 @@
+.navbar{
+  display: flex;
+  width: 100%;
+  background-color: #2B59AF;
+  .logo{
+    width: 25%;
+  }
+  .menu-container{
+    width: 50%;
+    display: flex;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    justify-content: space-between;
+    padding: 20px 0 0 0;
+    a{
+      text-decoration: none;
+      color: #F3ECEE;
+      text-align: center;
+      font-size: 18px;
+      padding-top: 5px;
+      transition: 0.5s linear;
+      &:hover{
+        background-color: #F3ECEE;
+        color: #2B59AF;
+      }
+    }
+  }
+  .user-container{
+    width: 25%;
+    border: 1px solid #F3ECEE;
+  }
+}
+
+
+// logo, my profile, kép+név, my events, contact us 
