@@ -26,9 +26,8 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    // this.logService.login(this.loginForm.value);
+    this.logService.login(this.loginForm.value);
     this.router.navigate(['/main']);
-    console.log('ok');
   }
 
 }

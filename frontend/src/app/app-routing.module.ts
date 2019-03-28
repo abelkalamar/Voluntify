@@ -26,7 +26,7 @@ const routes: Routes = [
     path: 'comp/main', component: MainComponent, children: [
       { path: 'event/create', component: CreateEventComponent },
       { path: 'search', component: SearchPeopleComponent },
-      { path: 'user/detail', component: PersonDetailComponent },
+      { path: 'user/detail/:eventId', component: PersonDetailComponent },
     ]
   },
 ];
