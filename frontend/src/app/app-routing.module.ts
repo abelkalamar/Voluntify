@@ -16,8 +16,9 @@ const routes: Routes = [
   { path: 'register/:type', component: RegisterComponent },
   {
     path: 'main', component: MainComponent, children: [
+      { path: '', component: EventListComponent },
       { path: 'event/list', component: EventListComponent },
-      { path: 'event/detail', component: EventDetailComponent },
+      { path: 'event/detail/:id', component: EventDetailComponent },
       { path: 'profile', component: UpdateProfileComponent },
     ]
   },

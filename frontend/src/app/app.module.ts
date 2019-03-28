@@ -29,8 +29,8 @@ import { NavbarComponent } from './components/main/navbar/navbar.component';
     CreateEventComponent,
     SearchPeopleComponent,
     PersonDetailComponent,
-    CompMainComponent,
-    NavbarComponent
+    NavbarComponent,
+    CompMainComponent
   ],
   imports: [
     BrowserModule,

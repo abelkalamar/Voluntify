@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
- 
+
   signupForm: FormGroup;
 
   constructor(
@@ -25,8 +25,8 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
-    // this.logService.register(this.signupForm.value);
-    // this.signupForm.reset();
-    console.log(this.signupForm.value);
+    this.logService.register(this.signupForm.value);
+    this.signupForm.reset();
+    // console.log(this.signupForm.value);
   }
 }

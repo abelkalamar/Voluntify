@@ -1,4 +1,7 @@
 .navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   padding: 5px 0 0 0;
   width: 100%;
@@ -9,13 +12,13 @@
   font-family: 'Open Sans Condensed', sans-serif;
   .logo{
     width: 25%;
-    &:hover{
-      cursor: pointer;
-    }
     .logo-img{
       width: 60%;
       &:focus{
         outline: none;
+      }
+      &:hover{
+        cursor: pointer;
       }
     }
   }
@@ -81,5 +84,12 @@
 }
 
 
+.sticky{
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 10;
+  width: 100%;
+}
 
 // logo, my profile, kép+név, my events, contact us 
