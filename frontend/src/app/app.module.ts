@@ -12,6 +12,7 @@ import { UpdateProfileComponent } from './components/main/update-profile/update-
 import { CreateEventComponent } from './components/main/create-event/create-event.component';
 import { SearchPeopleComponent } from './components/main/search-people/search-people.component';
 import { PersonDetailComponent } from './components/main/person-detail/person-detail.component';
+import { NavbarComponent } from './components/main/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PersonDetailComponent } from './components/main/person-detail/person-de
     UpdateProfileComponent,
     CreateEventComponent,
     SearchPeopleComponent,
-    PersonDetailComponent
+    PersonDetailComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
