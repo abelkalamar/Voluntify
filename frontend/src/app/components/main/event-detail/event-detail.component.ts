@@ -30,9 +30,9 @@ export class EventDetailComponent implements OnInit {
 }
 
   ngOnInit() {
-    this.eventService.getEventById(this.eventId);
+    this.eventService.getEventById(this.eventId)
     // .subscribe(event => {
-    // this.event = event;
+    // console.log(event);
     // })
   }
 
