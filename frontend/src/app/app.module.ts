@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,8 +15,7 @@ import { CreateEventComponent } from './components/comp-main/create-event/create
 import { SearchPeopleComponent } from './components/comp-main/search-people/search-people.component';
 import { PersonDetailComponent } from './components/comp-main/person-detail/person-detail.component';
 import { CompMainComponent } from './components/comp-main/comp-main.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './components/main/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     CreateEventComponent,
     SearchPeopleComponent,
     PersonDetailComponent,
-    CompMainComponent
+    CompMainComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

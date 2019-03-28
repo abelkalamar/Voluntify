@@ -1,0 +1,17 @@
+<div class="navbar">
+  <div class="logo" >
+    <img class="logo-img" src="../../../../assets/Wowlunteer8.png" routerLink="/main">
+  </div>
+  <div class="row-container">
+    <div class="menu-container">
+      <a (click)="select('events')" [class.selected]="selected==='events'" routerLink="/main/event/list"><i class="far fa-calendar"></i>My events</a>
+      <a (click)="select('profile')" [class.selected]="selected==='profile'" routerLink="/main/profile"><i class="far fa-address-card"></i>My profile</a>
+      <a (click)="select('contact')" [class.selected]="selected==='contact'" ><i class="far fa-envelope"></i>Contact us</a>
+    </div>
+    <div class="user-container">
+      <img class="profile-photo" src="../../../../assets/profile.png">
+      <h3 class="user-name">somebody@gmail.com</h3>
+    </div>
+  </div>
+
+</div>
