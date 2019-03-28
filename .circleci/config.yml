@@ -8,12 +8,11 @@ jobs:
 
     steps:
       - checkout
-
       - run: 
-          name: Install dependencies
+          name: Frontend build
           command: |
             cd frontend && npm install
-      
+            
       - run: 
           name: Frontend Lint
           command: |
