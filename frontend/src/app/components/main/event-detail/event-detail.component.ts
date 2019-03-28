@@ -8,7 +8,7 @@ import { EventService } from 'src/app/services/event.service';
   styleUrls: ['./event-detail.component.scss']
 })
 export class EventDetailComponent implements OnInit {
-  valid: boolean = false;
+  valid = false;
   eventId: number;
   event = {id: this.eventId,
     title: 'First title',
@@ -23,25 +23,24 @@ export class EventDetailComponent implements OnInit {
   }
   changeEvent(event) {
     if (event.target.checked) {
-        this.valid= true;
-    }
-    else {
-        this.valid= false;
+        this.valid = true;
+    } else {
+        this.valid = false;
     }
 }
 
   ngOnInit() {
     this.eventService.getEventById(this.eventId);
-    //.subscribe(event => {
+    // .subscribe(event => {
     // this.event = event;
-    //})
+    // })
   }
 
-  apply(){
+  apply() {
     this.eventService.applyEvent(this.eventId);
-    //.subscribe(res => {
+    // .subscribe(res => {
       this.router.navigate(['/main/event/list']);
-    //});
+    // });
   }
 
 }

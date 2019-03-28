@@ -30,7 +30,7 @@ export class EventService {
     console.log('get detailed events');
     // return this.http.get(`${this.baseUrl}/id`, { headers });
   }
-  applyEvent(id:number){
+  applyEvent(id: number) {
     console.log('applied');
   }
 }
