@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
+import { HttpClientModule} from '@angular/common/http';
 import { RegisterComponent } from './components/register/register.component';
 import { MainComponent } from './components/main/main.component';
 import { EventListComponent } from './components/main/event-list/event-list.component';
@@ -14,7 +15,7 @@ import { SearchPeopleComponent } from './components/comp-main/search-people/sear
 import { PersonDetailComponent } from './components/comp-main/person-detail/person-detail.component';
 import { CompMainComponent } from './components/comp-main/comp-main.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './components/main/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     CreateEventComponent,
     SearchPeopleComponent,
     PersonDetailComponent,
+    NavbarComponent,
     CompMainComponent
   ],
   imports: [
