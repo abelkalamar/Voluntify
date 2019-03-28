@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
+import { EventService } from 'src/app/services/event.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { PersonalDataService } from 'src/app/services/personal-data.service';
 
 @Component({
   selector: 'app-search-people',
@@ -7,9 +12,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPeopleComponent implements OnInit {
 
-  constructor() { }
+  formData: FormGroup;
+
+  constructor(
+    private http: HttpClient,
+    private userService: PersonalDataService
+  ) { }
 
   ngOnInit() {
+    this.formData = new FormGroup({
+      'profession': new FormControl(''),
+      'interest': new FormControl(''),
+      'isLooking': new FormControl(false)
+    });
+  }
+
+  onSubmit() {
+    this.userService.searchUsers(this.formData.value)
+      .subscribe(result => {
+        console.log(result);
+      });
   }
 
 }

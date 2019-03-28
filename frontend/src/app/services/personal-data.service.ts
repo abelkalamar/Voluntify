@@ -40,4 +40,16 @@ export class PersonalDataService {
     this.http.get(`${this.baseUrl}/api`, { headers });
   }
 
+  searchUsers(formData: Object) {
+    // const body = {
+    //   'profession': formData.profession,
+    //   'interest': formData.interest,
+    //   'isLooking': formData.isLooking
+    // }
+    const headers: HttpHeaders = new HttpHeaders()
+      .set('Content-Type', 'application/json')
+      .set('Authorization', `Bearer ${window.localStorage.getItem('token')}`);
+      return this.http.post(`${this.baseUrl}/api/user/search`, formData, { headers });
+  }
+
 }

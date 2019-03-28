@@ -1,3 +1,15 @@
-<p>
-  search-people works!
-</p>
+<form [formGroup]="formData" action="" (ngSubmit)=onSubmit()>
+  <div class="form-group profession">
+    <label for="profession">Profession</label>
+    <input type="text" id="profession" class="form-control" formControlName="profession" placeholder="profession">
+  </div>
+  <div class="form-group interest">
+    <label for="interest">Interest</label>
+    <input type="text" id="interest" class="form-control" formControlName="interest" placeholder="interest">
+  </div>
+  <div class="form-group isLooking">
+    <label for="isLooking">Looking?</label>
+    <input type="checkbox" id="isLooking" class="form-control" formControlName="isLooking" placeholder="isLooking">
+  </div>
+  <button>Send</button>
+</form>
