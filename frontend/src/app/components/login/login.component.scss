@@ -4,12 +4,6 @@
   width: 100vw;
   height: 100vh;
   background-color: #F3ECEE;
-  // background-image: url(../../assets/bcg_img02.jpg);
-  // background-repeat: no-repeat;
-  // background-attachment: fixed;
-  // background-position: center center;
-  // background-size: cover;
-  // filter: blur(5px);
 }
 
 colors {
@@ -68,6 +62,18 @@ form, .form-group, .reg-form {
   color: #F3ECEE;
   text-align: center;
   text-transform: uppercase;
+  font-family: 'Jura', sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 30px;
+}
+
+form {
+  width: 100%;
+  align-items: center;
+}
+
+.form-group {
+  width: 80%;
 }
 
 .reg-form label {
@@ -75,15 +81,16 @@ form, .form-group, .reg-form {
   padding: 0;
   color: #F3ECEE;
   font-weight: bold;
+  font-family: 'Jura', sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 18px;
 }
 
-.reg-form input {
-  width: 100%;
-  margin-bottom: 10px;
-}
 
 .reg-form input[type="text"],
 .reg-form input[type="password"] {
+  width: 100%;
+  margin-bottom: 10px;
   border: none;
   border-bottom: 1px solid #F3ECEE;
   background: transparent;
@@ -91,6 +98,8 @@ form, .form-group, .reg-form {
   height: 35px;
   font-size: 17px;
   color: #F3ECEE;
+  font-family: 'Jura', sans-serif;
+  letter-spacing: 0.1em;
 }
 
 .reg-form input[type="text"].ng-invalid.ng-touched,
@@ -105,16 +114,19 @@ form, .form-group, .reg-form {
   background: #2B59AF;
   outline: none;
   border: none;
-  border-radius: 25px;
-  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 2px 11px 14px -8px rgba(0,0,0,0.75);
+  font-family: 'Jura', sans-serif;
+  letter-spacing: 0.1em;
+  width: 30%;
 }
 
 .button:hover {
-  background: rgb(248, 61, 61);
+  background: rgb(71, 109, 180);
 }
 
 .error {
-  color: #2B59AF;
+  color: red;
   font-size: 12px;
   margin-bottom: 10px;
   visibility: hidden;
@@ -122,6 +134,20 @@ form, .form-group, .reg-form {
 
 .show {
   visibility: unset;
+}
+
+.regType {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.reg {
+  height: 40px;
+}
+
+.volunteer {
+  margin-left: 20px;
 }
 
 @media screen and (max-width: 500px) {

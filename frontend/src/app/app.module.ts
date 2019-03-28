@@ -13,6 +13,8 @@ import { CreateEventComponent } from './components/comp-main/create-event/create
 import { SearchPeopleComponent } from './components/comp-main/search-people/search-people.component';
 import { PersonDetailComponent } from './components/comp-main/person-detail/person-detail.component';
 import { CompMainComponent } from './components/comp-main/comp-main.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { CompMainComponent } from './components/comp-main/comp-main.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
