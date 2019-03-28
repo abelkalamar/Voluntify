@@ -13,7 +13,7 @@ import { PersonDetailComponent } from './components/comp-main/person-detail/pers
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
+  { path: 'register/:type', component: RegisterComponent },
   {
     path: 'main', component: MainComponent, children: [
       { path: 'event/list', component: EventListComponent },
