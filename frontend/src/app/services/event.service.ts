@@ -9,10 +9,10 @@ export class EventService {
 
   constructor() { }
 
-  getEvents(){
+  getEvents() {
     console.log('all events');
   }
-  getUserEvents(){
+  getUserEvents() {
     console.log('user events');
   }
 }

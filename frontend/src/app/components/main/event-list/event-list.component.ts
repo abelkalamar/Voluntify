@@ -8,7 +8,7 @@ import { EventService } from '../../../services/event.service';
   styleUrls: ['./event-list.component.scss']
 })
 export class EventListComponent implements OnInit {
-  getAll: boolean = true;
+  getAll = true;
   eventList;
   constructor(private router: Router, private eventService: EventService) {
     this.router.events.subscribe(value => {
