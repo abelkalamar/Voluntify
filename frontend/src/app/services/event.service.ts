@@ -14,10 +14,10 @@ export class EventService {
 
   getEvents() {
     console.log('all events');
-    return this.http.get(`${this.baseUrl}/`);
+    // return this.http.get(`${this.baseUrl}/`);
   }
   getUserEvents() {
     console.log('user events');
-    return this.http.get(`${this.baseUrl}/`);
+    // return this.http.get(`${this.baseUrl}/`);
   }
 }

@@ -24,14 +24,16 @@ export class EventListComponent implements OnInit {
 
   ngOnInit() {
     if (this.getAll) {
-      this.eventService.getEvents().subscribe(events => {
-        this.eventList = events;
-      });
+      this.eventService.getEvents();
+      // .subscribe(events => {
+      //   this.eventList = events;
+      // });
     } else {
-      this.eventService.getUserEvents().subscribe(events => {
-        this.eventList = events;
-      });
+      this.eventService.getUserEvents();
+      // .subscribe(events => {
+      //   this.eventList = events;
+      // });
     }
-    console.log(this.eventList);
+    // console.log(this.eventList);
   }
 }
