@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
+  selected: string = null;
   constructor() { }
 
   ngOnInit() {
   }
-
+  select(item) {
+    this.selected = item;
+  };
 }
