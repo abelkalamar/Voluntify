@@ -17,7 +17,6 @@ export class EventListComponent implements OnInit {
           this.getAll = false;
         } else {
           this.getAll = true;
-
         }
       }
     });
@@ -25,11 +24,14 @@ export class EventListComponent implements OnInit {
 
   ngOnInit() {
     if (this.getAll) {
-      this.eventService.getEvents();
+      this.eventService.getEvents().subscribe(events => {
+        this.eventList = events;
+      });
     } else {
-      this.eventService.getUserEvents();
+      this.eventService.getUserEvents().subscribe(events => {
+        this.eventList = events;
+      });
     }
+    console.log(this.eventList);
   }
-
-
 }

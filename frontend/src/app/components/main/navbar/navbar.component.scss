@@ -9,13 +9,13 @@
   font-family: 'Open Sans Condensed', sans-serif;
   .logo{
     width: 25%;
-    &:hover{
-      cursor: pointer;
-    }
     .logo-img{
       width: 60%;
       &:focus{
         outline: none;
+      }
+      &:hover{
+        cursor: pointer;
       }
     }
   }
