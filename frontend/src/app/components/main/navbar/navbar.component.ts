@@ -13,5 +13,5 @@ export class NavbarComponent implements OnInit {
   }
   select(item) {
     this.selected = item;
-  };
+  }
 }

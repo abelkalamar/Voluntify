@@ -7,11 +7,11 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./event-list.component.scss']
 })
 export class EventListComponent implements OnInit {
-  justUserEvents:boolean = false;
+  justUserEvents = false;
   constructor(private router: Router) {
     this.router.events.subscribe(value => {
       if (value instanceof NavigationEnd) {
-        if(value.url !== '/main'){
+        if (value.url !== '/main') {
           this.justUserEvents === true;
         }
       }
