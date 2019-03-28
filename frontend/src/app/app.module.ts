@@ -9,9 +9,12 @@ import { MainComponent } from './components/main/main.component';
 import { EventListComponent } from './components/main/event-list/event-list.component';
 import { EventDetailComponent } from './components/main/event-detail/event-detail.component';
 import { UpdateProfileComponent } from './components/main/update-profile/update-profile.component';
-import { CreateEventComponent } from './components/main/create-event/create-event.component';
-import { SearchPeopleComponent } from './components/main/search-people/search-people.component';
-import { PersonDetailComponent } from './components/main/person-detail/person-detail.component';
+import { CreateEventComponent } from './components/comp-main/create-event/create-event.component';
+import { SearchPeopleComponent } from './components/comp-main/search-people/search-people.component';
+import { PersonDetailComponent } from './components/comp-main/person-detail/person-detail.component';
+import { CompMainComponent } from './components/comp-main/comp-main.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,11 +27,14 @@ import { PersonDetailComponent } from './components/main/person-detail/person-de
     UpdateProfileComponent,
     CreateEventComponent,
     SearchPeopleComponent,
-    PersonDetailComponent
+    PersonDetailComponent,
+    CompMainComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
