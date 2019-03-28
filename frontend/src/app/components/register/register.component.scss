@@ -6,14 +6,6 @@
   background-color: #F3ECEE;
 }
 
-colors {
-  dark: #2B59AF;
-  lighter: #1E9DD6;
-  medium: #59B7DC;
-  gray: #8B7A8F;
-  whitey: #F3ECEE;
-}
-
 form, .form-group, .reg-form {
   display: flex;
   flex-direction: column;
@@ -34,7 +26,7 @@ form, .form-group, .reg-form {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 800px;
-  height: 420px;
+  height: 550px;
   background: #59B7DC;
   display: flex;
   flex-direction: row;
@@ -58,7 +50,7 @@ form, .form-group, .reg-form {
 
 .reg-form h2 {
   margin-top: 20px;
-  padding: 0 0 20px;
+  padding: 0 0 10px;
   color: #F3ECEE;
   text-align: center;
   text-transform: uppercase;

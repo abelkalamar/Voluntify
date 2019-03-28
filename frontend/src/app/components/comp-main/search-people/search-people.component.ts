@@ -28,10 +28,10 @@ export class SearchPeopleComponent implements OnInit {
   }
 
   onSubmit() {
-    this.userService.searchUsers(this.formData.value)
-      .subscribe(result => {
-        console.log(result);
-      });
+    // this.userService.searchUsers(this.formData.value)
+    //   .subscribe(result => {
+    //     console.log(result);
+    //   });
   }
 
 }

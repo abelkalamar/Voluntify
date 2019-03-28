@@ -1,9 +1,10 @@
 <div class="container">
   <div class="reg-form">
     <div class="sideDetails">
-      <img class="people" src="../../../assets/people_reg.jpg" alt="people_laugh">
+      <img class="people" src="../../../assets/people_full.jpg" alt="people_laugh">
     </div>
     <div class="register">
+      <img src="../../../assets/Wowlunteer6.png" alt="">
       <h2 class="title">Register</h2>
       <form [formGroup]="signupForm" (ngSubmit)=onSubmit()>
         <div class="form-group">
@@ -26,10 +27,6 @@
           <label for="type">Confirm Password</label>
           <input type="password" class="form-control" 
             placeholder="Enter your password again">
-          <!-- <span [ngClass]="{show: !signupForm.get('confPassword').valid && signupForm.get('confPassword').touched}"
-            class="error">
-            Passwords don't mach!
-          </span> -->
         </div>
         <footer>
           <button class="button" type="button" routerLink="/login">Back to Login</button>

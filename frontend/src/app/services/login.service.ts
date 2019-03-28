@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { environment } from '../../environments/environment';
@@ -8,7 +8,7 @@ import { environment } from '../../environments/environment';
 })
 export class LoginService {
 
-  baseUrl = environment.baseUrl2;
+  baseUrl = environment.baseUrlLili;
 
   constructor(
     private http: HttpClient,
@@ -30,6 +30,7 @@ export class LoginService {
   }
 
   login(userData: { email: string, password: string }): void {
+    console.log('ok');
     const headers: HttpHeaders = new HttpHeaders()
       .set('Content-Type', 'application/json')
       .set('X-Requested-With', 'XMLHttpRequest');
@@ -37,10 +38,13 @@ export class LoginService {
       email: userData.email,
       password: userData.password
     }, { headers })
-      .subscribe((data: { token: string }) => {
+      .subscribe((data: { token: string, role: string }) => {
         window.localStorage.setItem('token', data.token);
-        console.log(data);
-        this.router.navigate(['/main']);
+        if (data.role === 'ROLE_COMPANY') {
+          this.router.navigate(['/comp/main']);
+        } else {
+          this.router.navigate(['/main']);
+        }
       });
   }
 }
