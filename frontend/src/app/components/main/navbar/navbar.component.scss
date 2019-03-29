@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -6,35 +6,38 @@
   display: flex;
   padding: 5px 0 0 0;
   width: 100%;
-  background-color: #2B59AF;
-  color: #F3ECEE;
+  background-color: #2b59af;
+  color: #f3ecee;
   display: flex;
   flex-wrap: wrap;
-  font-family: 'Open Sans Condensed', sans-serif;
-  .logo{
+  font-family: "Open Sans Condensed", sans-serif;
+  .logo {
     width: 25%;
-    .logo-img{
+    .logo-img-pc {
       width: 60%;
-      &:focus{
+      &:focus {
         outline: none;
       }
-      &:hover{
+      &:hover {
         cursor: pointer;
       }
     }
   }
-  .row-container{
+
+  .logo-img-mobile{
+    display: none;
+  }
+  .row-container {
     width: 75%;
     display: flex;
-   
   }
-  .menu-container{
+  .menu-container {
     width: 75%;
     display: flex;
     align-items: flex-end;
     text-transform: uppercase;
     justify-content: space-between;
-    a{
+    a {
       text-decoration: none;
       letter-spacing: 1px;
       color: rgb(177, 177, 177);
@@ -47,25 +50,25 @@
       border-left: 1px solid transparent;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
-      &:hover{
-        color: #F3ECEE;
+      &:hover {
+        color: #f3ecee;
         cursor: pointer;
       }
-      i{
+      i {
         font-size: 20px;
       }
-      &.selected{
-        border-top: 1px solid #F3ECEE;
-        border-right: 1px solid #F3ECEE;
-        border-left: 1px solid #F3ECEE;
+      &.selected {
+        border-top: 1px solid #f3ecee;
+        border-right: 1px solid #f3ecee;
+        border-left: 1px solid #f3ecee;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         background-color: rgb(243, 236, 238);
-        color: #2B59AF;
+        color: #2b59af;
       }
     }
   }
-  .user-container{
+  .user-container {
     width: 15%;
     display: flex;
     align-items: center;
@@ -84,11 +87,18 @@
   }
 }
 
-
-.sticky{
+.sticky {
   position: fixed;
   top: 0;
   overflow: hidden;
   z-index: 10;
   width: 100%;
+}
+
+@media (max-width: 950px) {
+ 
+  .logo{
+display: flex;
+align-items: center;
+  }
 }
