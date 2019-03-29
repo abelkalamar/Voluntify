@@ -28,14 +28,6 @@ export class PersonalDataService {
       age: userData.value.age,
       isLooking: userData.value.isOpen
     }
-    // addData.append('firstName', userData.value.firstName);
-    // addData.append('lastName', userData.value.lastName);
-    // addData.append('mobileNumber', userData.value.mobileNumber);
-    // addData.append('profession', userData.value.profession);
-    // addData.append('age', userData.value.age);
-    // addData.append('isLooking', userData.value.isOpen);
-    // addData.append('file', userData['files'][0]);
-    // // console.log(addData);
     const headers: HttpHeaders = new HttpHeaders()
       .set('Content-Type', 'application/json')
       .set('Authorization', `Bearer ${window.localStorage.getItem('token')}`);
@@ -57,11 +49,6 @@ export class PersonalDataService {
   }
 
   searchUsers(formData: Object) {
-    // const body = {
-    //   'profession': formData.profession,
-    //   'interest': formData.interest,
-    //   'isLooking': formData.isLooking
-    // }
     const headers: HttpHeaders = new HttpHeaders()
       .set('Content-Type', 'application/json')
       .set('Authorization', `Bearer ${window.localStorage.getItem('token')}`);
