@@ -11,7 +11,7 @@ export class EventDetailComponent implements OnInit {
   valid = false;
   eventId: number;
   event;
-  
+
   constructor(private router: Router, private eventService: EventService) {
     this.router.events.subscribe(value => {
       if (value instanceof NavigationEnd) {

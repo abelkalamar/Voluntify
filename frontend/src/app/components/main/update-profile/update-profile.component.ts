@@ -45,7 +45,7 @@ export class UpdateProfileComponent implements OnInit {
     this.userService.sendPicture(event.target.files[0])
       .subscribe(result => {
         console.log(result);
-        window.localStorage.setItem('picUrl', result['fileDownloadUri'])
+        window.localStorage.setItem('picUrl', result['fileDownloadUri']);
       });
   }
 

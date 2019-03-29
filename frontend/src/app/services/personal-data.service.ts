@@ -27,7 +27,7 @@ export class PersonalDataService {
       profession: userData.value.profession,
       age: userData.value.age,
       isLooking: userData.value.isOpen
-    }
+    };
     const headers: HttpHeaders = new HttpHeaders()
       .set('Content-Type', 'application/json')
       .set('Authorization', `Bearer ${window.localStorage.getItem('token')}`);
@@ -35,7 +35,7 @@ export class PersonalDataService {
   }
 
   sendPicture(picture) {
-    const userPicture = new FormData()
+    const userPicture = new FormData();
     userPicture.append('file', picture);
     const headers: HttpHeaders = new HttpHeaders()
       .set('Authorization', `Bearer ${window.localStorage.getItem('token')}`);
