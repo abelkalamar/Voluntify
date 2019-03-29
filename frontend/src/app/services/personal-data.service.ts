@@ -71,7 +71,7 @@ export class PersonalDataService {
   getEmail(): Observable<string> {
     const headers: HttpHeaders = new HttpHeaders()
       .set('Authorization', `Bearer ${window.localStorage.getItem('token')}`);
-    return this.http.get<string>(`${this.baseUrlLili}/api/user/email`, { headers });
+    return this.http.get<string>(`${this.baseUrl}/api/user/email`, { headers });
   }
 
 }
