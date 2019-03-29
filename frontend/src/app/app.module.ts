@@ -16,6 +16,7 @@ import { SearchPeopleComponent } from './components/comp-main/search-people/sear
 import { PersonDetailComponent } from './components/comp-main/person-detail/person-detail.component';
 import { CompMainComponent } from './components/comp-main/comp-main.component';
 import { NavbarComponent } from './components/main/navbar/navbar.component';
+import { CompNavbarComponent } from './components/comp-main/comp-navbar/comp-navbar.component';
 import { ContactusComponent } from './components/main/contactus/contactus.component';
 import { BaseComponent } from './components/comp-main/base/base.component';
 
@@ -34,7 +35,8 @@ import { BaseComponent } from './components/comp-main/base/base.component';
     NavbarComponent,
     CompMainComponent,
     ContactusComponent,
-    BaseComponent
+    BaseComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,

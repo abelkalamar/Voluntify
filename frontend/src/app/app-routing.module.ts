@@ -27,7 +27,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'comp/main', component: MainComponent, children: [
+    path: 'comp/main', component: CompMainComponent, children: [
       { path: '', component: BaseComponent },
       { path: 'event/create', component: CreateEventComponent },
       { path: 'search', component: SearchPeopleComponent },

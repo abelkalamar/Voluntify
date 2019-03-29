@@ -1,0 +1,55 @@
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  padding: 5px 0 0 0;
+  width: 100%;
+  background-color: #2B59AF;
+  color: #F3ECEE;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Open Sans Condensed', sans-serif;
+  .logo{
+    width: 25%;
+    .logo-img{
+      width: 60%;
+      &:focus{
+        outline: none;
+      }
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+  .row-container{
+    width: 75%;
+    display: flex;
+    justify-content: flex-end;
+    .user-container{
+      width: 25%;
+      display: flex;
+      align-items: center;
+      padding: 0 0 10px 0;
+      .profile-photo {
+        height: 50px;
+        width: 50px;
+        border-radius: 25px;
+        margin: 0 15px;
+      }
+      .user-name {
+        margin-right: 10px;
+        letter-spacing: 2px;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.sticky{
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 10;
+  width: 100%;
+}

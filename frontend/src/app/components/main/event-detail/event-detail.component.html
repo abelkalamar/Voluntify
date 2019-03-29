@@ -4,9 +4,8 @@
   <!-- </div>
   <div class="right-side">
     <h1 class="title">{{ event.title }}</h1>
-    <p>{{event.address}}</p>
-    <p>{{event.start}}</p>
-    <p>{{event.finish}}</p>
+    <p class="address">{{event.address}}</p>
+    <p class="date">{{event.start.slice(0, 10)}}. - {{event.finish.slice(0, 10)}.}</p>
     <p class="content">{{ event.description }}</p>
     <div class="checkbox">
       <input type="checkbox" (change)="changeEvent($event)">I accept the terms and conditions.
