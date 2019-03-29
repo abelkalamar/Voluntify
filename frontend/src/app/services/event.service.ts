@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 
 export class EventService {
-  baseUrl: string = environment.baseUrl2;
+  baseUrl: string = environment.baseUrlLili;
   constructor(private http: HttpClient) { }
 
   getEvents() {
@@ -38,7 +38,9 @@ export class EventService {
   }
 
   createEvent(eventData):Observable<any> {
+    console.log('kay');
     const body = {
+      type: 'Environmental',
       title: eventData.title,
       description: eventData.description,
       address: eventData.address,

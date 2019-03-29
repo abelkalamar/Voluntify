@@ -43,6 +43,7 @@ export class CreateEventComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log('ok');
     this.eventService.createEvent(this.eventData.value)
       .subscribe(result => {
         console.log(result);

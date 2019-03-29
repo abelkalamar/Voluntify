@@ -1,9 +1,10 @@
 <div class="container">
   <div class="reg-form">
     <div class="sideDetails">
-      <img class="people" src="../../../assets/people.jpg" alt="people_laugh">
+      <img class="people" src="../../../assets/people_reg.jpg" alt="people_laugh">
     </div>
     <div class="login">
+      <img src="../../../assets/Wowlunteer6.png" alt="">
       <h2 class="title">Login</h2>
       <form [formGroup]="loginForm" (ngSubmit)=onSubmit()>
         <div class="form-group">
@@ -23,7 +24,8 @@
         </div>
         <div class="regType">
           <button class="button reg" type="button" routerLink="/register/company">Register as Company</button>
-          <button class="button reg volunteer" type="button" routerLink="/register/volunteer">Register as Volunteer</button>
+          <button class="button reg volunteer" type="button" routerLink="/register/volunteer">Register as
+            Volunteer</button>
         </div>
         <button class="button" type="submit" [disabled]="!loginForm.valid">Login</button>
       </form>

@@ -49,7 +49,13 @@ export class PersonalDataService {
     const headers: HttpHeaders = new HttpHeaders()
       .set('Content-Type', 'application/json')
       .set('Authorization', `Bearer ${window.localStorage.getItem('token')}`);
-      return this.http.post(`${this.baseUrl}/api/user/search`, formData, { headers });
+    return this.http.post(`${this.baseUrl}/api/user/search`, formData, { headers });
+  }
+
+  getEmail(): Observable<string> {
+    const headers: HttpHeaders = new HttpHeaders()
+      .set('Authorization', `Bearer ${window.localStorage.getItem('token')}`);
+    return this.http.get<string>(`${this.baseUrl}/api/user/email`, { headers });
   }
 
 }

@@ -2,6 +2,7 @@ import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { environment } from '../../environments/environment';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,18 +16,15 @@ export class LoginService {
     private router: Router
   ) { }
 
-  register(userData: { email: string, password: string, type: string }): void {
+  register(userData: { email: string, password: string, type: string }): Observable<any> {
     console.log(userData);
     const headers: HttpHeaders = new HttpHeaders()
       .set('Content-Type', 'application/json');
-    this.http.post<Object>(`${this.baseUrl}/api/user/register`, {
+    return this.http.post<Object>(`${this.baseUrl}/api/user/register`, {
       email: userData.email,
       password: userData.password,
       type: userData.type
-    }, { headers })
-      .subscribe(data => {
-        console.log(data);
-      });
+    }, { headers });
   }
 
   login(userData: { email: string, password: string }): void {
