@@ -36,7 +36,8 @@ import { BaseComponent } from './components/comp-main/base/base.component';
     CompMainComponent,
     ContactusComponent,
     BaseComponent,
-    ContactusComponent
+    ContactusComponent,
+    CompNavbarComponent
   ],
   imports: [
     BrowserModule,

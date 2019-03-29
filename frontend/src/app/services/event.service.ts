@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 
 export class EventService {
-  baseUrl: string = environment.baseUrlLili;
+  baseUrl: string = environment.baseUrl2;
   constructor(private http: HttpClient) { }
 
   getEvents() {
