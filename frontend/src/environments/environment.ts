@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl2: 'http://10.27.6.44:8080',
+  baseUrl2: 'http://10.27.6.73:8080',
   baseUrlLili: 'http://10.27.6.29:8080'
 };
 
