@@ -17,6 +17,7 @@ import { CompMainComponent } from './components/comp-main/comp-main.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/main/navbar/navbar.component';
 import { CompNavbarComponent } from './components/comp-main/comp-navbar/comp-navbar.component';
+import { ContactusComponent } from './components/main/contactus/contactus.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CompNavbarComponent } from './components/comp-main/comp-navbar/comp-nav
     PersonDetailComponent,
     NavbarComponent,
     CompMainComponent,
-    CompNavbarComponent
+    CompNavbarComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,

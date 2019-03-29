@@ -10,6 +10,7 @@ import { CreateEventComponent } from './components/comp-main/create-event/create
 import { SearchPeopleComponent } from './components/comp-main/search-people/search-people.component';
 import { PersonDetailComponent } from './components/comp-main/person-detail/person-detail.component';
 import { CompMainComponent } from './components/comp-main/comp-main.component';
+import { ContactusComponent } from './components/main/contactus/contactus.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -21,6 +22,7 @@ const routes: Routes = [
       { path: 'event/list', component: EventListComponent },
       { path: 'event/detail/:id', component: EventDetailComponent },
       { path: 'profile', component: UpdateProfileComponent },
+      { path: 'contactus', component: ContactusComponent },
     ]
   },
   {
