@@ -24,7 +24,18 @@
         outline: none;
       }
     }
-
+    .address {
+      font-family: "Open Sans Condensed", sans-serif;
+      letter-spacing: 1px;
+      margin: 10px 0;
+    }
+    .date {
+      font-family: "Open Sans Condensed", sans-serif;
+      color: #2b59af;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
     .content {
       font-family: "Quicksand", sans-serif;
       text-align: justify;
