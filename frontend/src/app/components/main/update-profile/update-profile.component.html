@@ -19,7 +19,7 @@
           <label for="picture">Profile picture</label>
           <button class="upload" type="button" (click)=upload.click()>Upload</button>
         </div>
-        <img [src]="picturePath || '../../../../assets/profile_02.jpg'" alt="profilePicture">
+        <img [src]="picturePath || '../../../../assets/profile.png'" alt="profilePicture">
         <input #upload type="file" id="picture" class="form-control" (change)="onFileAdded($event)"
           formControlName="picture" style="display: none;">
       </div>
