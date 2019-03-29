@@ -1,11 +1,12 @@
 <div class="container">
   <div class="reg-form">
     <div class="sideDetails">
-      <img class="people" src="../../../assets/people_reg.jpg" alt="people_laugh">
+      <img class="people" src="../../../assets/people_full.jpg" alt="people_laugh">
     </div>
     <div class="register">
+      <img src="../../../assets/Wowlunteer6.png" alt="">
       <h2 class="title">Register</h2>
-      <form [formGroup]="signupForm" (ngSubmit)=onSubmit()>
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit(confPassword.value)">
         <div class="form-group">
           <label for="email">Email</label>
           <input type="text" id="email" class="form-control" formControlName="email" placeholder="Enter Email">
@@ -23,13 +24,12 @@
           </span>
         </div>
         <div class="form-group">
-          <label for="type">Confirm Password</label>
-          <input type="password" class="form-control" 
-            placeholder="Enter your password again">
-          <!-- <span [ngClass]="{show: !signupForm.get('confPassword').valid && signupForm.get('confPassword').touched}"
+          <label>Confirm Password</label>
+          <input #confPassword type="password" class="form-control" placeholder="Enter your password again">
+          <span [ngClass]="{show: passwordError}"
             class="error">
-            Passwords don't mach!
-          </span> -->
+            {{ passwordError }}
+          </span>
         </div>
         <footer>
           <button class="button" type="button" routerLink="/login">Back to Login</button>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { LoginService } from 'src/app/services/login.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -11,10 +11,13 @@ import { ActivatedRoute } from '@angular/router';
 export class RegisterComponent implements OnInit {
 
   signupForm: FormGroup;
+  passwordError: string;
 
   constructor(
     private logService: LoginService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.signupForm = new FormGroup({
@@ -24,9 +27,17 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  onSubmit() {
-    this.logService.register(this.signupForm.value);
-    this.signupForm.reset();
-    // console.log(this.signupForm.value);
+  onSubmit(confPassword: string) {
+    if (confPassword !== this.signupForm.value['password']) {
+      return this.passwordError = 'Passwords don\'t match!';
+    }
+    this.logService.register(this.signupForm.value)
+      .subscribe(data => {
+        this.router.navigate(['/login']);
+      }, (error: Error) => {
+        console.log(error['error'].message);
+      });
   }
+
+
 }

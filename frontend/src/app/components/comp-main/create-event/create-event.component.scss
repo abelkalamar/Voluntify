@@ -1,0 +1,123 @@
+.container {
+  display: flex;
+  margin: 0 auto;
+  width: 80vw;
+  font-family: 'Jura', sans-serif;
+  flex-direction: column;
+  h1 {
+    margin: 20px 0;
+  }
+}
+
+.content {
+  display: flex;
+  width: 100%;
+}
+
+.leftSide, .rightSide {
+  width: 45%;
+}
+
+.rightSide {
+  margin-left: 10%
+}
+
+.form-group, .picture {
+  margin: 20px 0px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.picture {
+  display: flex;
+  align-items: flex-end;
+  img {
+    width: 200px;
+    border: 1px solid gray;
+  }
+}
+
+input, textarea {
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  &:focus{
+    outline: none;
+  }
+}
+
+input[type="text"],
+input[type="number"], 
+input[type="date"],
+textarea {
+  margin-top: 10px;
+  box-shadow: inset 0 0 2px #000000;
+}
+
+textarea {
+  max-width: 95%; 
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  label {
+    width: 150px;
+  }
+  .finish, .start {
+    margin-left: 20px;
+  }
+}
+
+.upload {
+  background-color: #2B59AF;
+  border: none;
+  color: #F3ECEE;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  height: 30px;
+  width: 100px;
+  margin: 0 30px;
+  &:hover{
+    background-color: rgb(68, 106, 177);
+  }
+  &:focus{
+    outline: none;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 50px;
+}
+
+.responsText {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  visibility: hidden;
+  width: 100%;
+  text-align: center;
+  color: #2B59AF;
+}
+
+.show {
+  visibility: unset;
+}
+
+@media screen and (max-width: 900px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .leftSide, .rightSide {
+    width: 98%;
+    margin-left: 0;
+  }
+}
