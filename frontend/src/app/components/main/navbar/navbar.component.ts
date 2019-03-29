@@ -23,7 +23,7 @@ export class NavbarComponent implements OnInit {
         console.log(email);
         this.userEmail = email['email'];
       });
-    window.localStorage.getItem('picUrl');
+    console.log(window.localStorage.getItem('picUrl'));
   }
 
   select(item) {
