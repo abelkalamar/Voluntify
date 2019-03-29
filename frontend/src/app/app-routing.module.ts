@@ -9,6 +9,7 @@ import { UpdateProfileComponent } from './components/main/update-profile/update-
 import { CreateEventComponent } from './components/comp-main/create-event/create-event.component';
 import { SearchPeopleComponent } from './components/comp-main/search-people/search-people.component';
 import { PersonDetailComponent } from './components/comp-main/person-detail/person-detail.component';
+import { CompMainComponent } from './components/comp-main/comp-main.component';
 import { ContactusComponent } from './components/main/contactus/contactus.component';
 
 const routes: Routes = [
@@ -19,13 +20,13 @@ const routes: Routes = [
     path: 'main', component: MainComponent, children: [
       { path: '', component: EventListComponent },
       { path: 'event/list', component: EventListComponent },
-      { path: 'event/detail', component: EventDetailComponent },
+      { path: 'event/detail/:id', component: EventDetailComponent },
       { path: 'profile', component: UpdateProfileComponent },
       { path: 'contactus', component: ContactusComponent },
     ]
   },
   {
-    path: 'comp/main', component: MainComponent, children: [
+    path: 'comp/main', component: CompMainComponent, children: [
       { path: 'event/create', component: CreateEventComponent },
       { path: 'search', component: SearchPeopleComponent },
       { path: 'user/detail', component: PersonDetailComponent },

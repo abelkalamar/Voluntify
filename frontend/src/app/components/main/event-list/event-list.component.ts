@@ -10,6 +10,7 @@ import { EventService } from '../../../services/event.service';
 export class EventListComponent implements OnInit {
   getAll = true;
   eventList;
+
   constructor(private router: Router, private eventService: EventService) {
     this.router.events.subscribe(value => {
       if (value instanceof NavigationEnd) {
@@ -24,16 +25,18 @@ export class EventListComponent implements OnInit {
 
   ngOnInit() {
     if (this.getAll) {
-      this.eventService.getEvents();
-      // .subscribe(events => {
-      //   this.eventList = events;
-      // });
+      this.eventService.getEvents()
+      .subscribe((events) => {
+        this.eventList = events['events'];
+        console.log(events['events']);
+      });
     } else {
-      this.eventService.getUserEvents();
-      // .subscribe(events => {
-      //   this.eventList = events;
-      // });
+      this.eventService.getUserEvents()
+      .subscribe(events => {
+        this.eventList = events['events'];
+        console.log(events);
+      });
     }
-    // console.log(this.eventList);
   }
+
 }

@@ -1,4 +1,8 @@
 .navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
   display: flex;
   padding: 5px 0 0 0;
   width: 100%;
@@ -81,5 +85,10 @@
 }
 
 
-
-// logo, my profile, kép+név, my events, contact us 
+.sticky{
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 10;
+  width: 100%;
+}
