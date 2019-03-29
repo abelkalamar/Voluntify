@@ -33,6 +33,6 @@ export class EventService {
     const headers: HttpHeaders = new HttpHeaders()
       .set('Authorization', `Bearer ${window.localStorage.getItem('token')}`);
     console.log('applied');
-    //return this.http.post(`${this.baseUrl}/api/event/id`, {id: id}, { headers } )
+    // return this.http.post(`${this.baseUrl}/api/event/id`, {id: id}, { headers } )
   }
 }
