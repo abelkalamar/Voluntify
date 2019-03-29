@@ -10,6 +10,8 @@ import { CreateEventComponent } from './components/comp-main/create-event/create
 import { SearchPeopleComponent } from './components/comp-main/search-people/search-people.component';
 import { PersonDetailComponent } from './components/comp-main/person-detail/person-detail.component';
 import { ContactusComponent } from './components/main/contactus/contactus.component';
+import { CompMainComponent } from './components/comp-main/comp-main.component';
+import { BaseComponent } from './components/comp-main/base/base.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -26,7 +28,7 @@ const routes: Routes = [
   },
   {
     path: 'comp/main', component: MainComponent, children: [
-      { path: '', redirectTo: 'event/create', pathMatch: 'full' },
+      { path: '', component: BaseComponent },
       { path: 'event/create', component: CreateEventComponent },
       { path: 'search', component: SearchPeopleComponent },
       { path: 'user/detail/:eventId', component: PersonDetailComponent },

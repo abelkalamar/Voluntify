@@ -20,12 +20,7 @@ export class NavbarComponent implements OnInit {
     this.userService.getEmail()
       .subscribe((email) => {
         console.log(email);
-        this.userEmail = email;
-      }, (error) => {
-        this.userEmail = error['error'].text;
-        console.log('Error :', typeof error['error'].text);
-        console.log('Error message:', error['error'].message);
-        console.log(this.userEmail);
+        this.userEmail = email['email'];
       });
   }
 

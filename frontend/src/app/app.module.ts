@@ -17,6 +17,7 @@ import { PersonDetailComponent } from './components/comp-main/person-detail/pers
 import { CompMainComponent } from './components/comp-main/comp-main.component';
 import { NavbarComponent } from './components/main/navbar/navbar.component';
 import { ContactusComponent } from './components/main/contactus/contactus.component';
+import { BaseComponent } from './components/comp-main/base/base.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ContactusComponent } from './components/main/contactus/contactus.compon
     PersonDetailComponent,
     NavbarComponent,
     CompMainComponent,
-    ContactusComponent
+    ContactusComponent,
+    BaseComponent
   ],
   imports: [
     BrowserModule,
