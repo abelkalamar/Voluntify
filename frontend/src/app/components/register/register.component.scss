@@ -144,19 +144,30 @@ footer {
   .reg-form {
     display: flex;
     justify-content: center;
-    min-width: 100vw;
+    width: 90vw;
     height: 100vh;
     padding: 40px;
   }
+  .sideDetails {
+    display:none;
+  }
 }
 
+
 @media screen and (min-width: 500px)
-and (max-width: 700px) {
+and (max-width: 800px) {
   .reg-form {
     display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     justify-content: center;
-    min-width: 100vw;
-    height: 100vh;
+    width: 400px;
     padding: 80px;
+  }
+
+  .sideDetails {
+    display:none;
   }
 }

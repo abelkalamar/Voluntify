@@ -105,3 +105,27 @@ select:focus {
   display: flex;
   justify-content: space-around;
 }
+
+@media screen and (max-width: 800px) {
+  .nameFields, .profession, .number {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-group{
+    width: 100%;    
+  }
+  .lastname, .preference, .mobile {
+    margin-left: 0px; 
+  }
+  .checkbox {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    label {
+      width: 80%;
+    }
+    input {
+      width: 20%;
+    }
+  }
+}
