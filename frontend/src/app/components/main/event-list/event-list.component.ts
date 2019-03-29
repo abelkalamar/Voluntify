@@ -34,7 +34,7 @@ export class EventListComponent implements OnInit {
       this.eventService.getUserEvents()
       .subscribe(events => {
         this.eventList = events['events'];
-        console.log(events); 
+        console.log(events);
       });
     }
   }

@@ -37,8 +37,8 @@ export class EventDetailComponent implements OnInit {
     this.eventService.getEventById(this.eventId)
     .subscribe(event => {
       this.event = event;
-    console.log(event); //ezt megjeleníteni
-    })
+    console.log(event); // ezt megjeleníteni
+    });
   }
 
   apply() {
