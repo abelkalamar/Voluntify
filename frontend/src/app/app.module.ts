@@ -16,6 +16,7 @@ import { PersonDetailComponent } from './components/comp-main/person-detail/pers
 import { CompMainComponent } from './components/comp-main/comp-main.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/main/navbar/navbar.component';
+import { CompNavbarComponent } from './components/comp-main/comp-navbar/comp-navbar.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NavbarComponent } from './components/main/navbar/navbar.component';
     SearchPeopleComponent,
     PersonDetailComponent,
     NavbarComponent,
-    CompMainComponent
+    CompMainComponent,
+    CompNavbarComponent
   ],
   imports: [
     BrowserModule,
