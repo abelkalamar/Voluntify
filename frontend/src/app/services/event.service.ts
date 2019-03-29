@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 
 export class EventService {
-  baseUrl: string = environment.baseUrl2;
+  baseUrl: string = environment.baseUrlLili;
   constructor(private http: HttpClient) { }
 
   getEvents() {
@@ -40,7 +40,6 @@ export class EventService {
   }
 
   createEvent(eventData): Observable<any> {
-    console.log('kay');
     const body = {
       type: 'Environmental',
       title: eventData.title,
@@ -49,6 +48,7 @@ export class EventService {
       start: eventData.start,
       finish: eventData.finish
     };
+    console.log(body);
     const headers: HttpHeaders = new HttpHeaders()
       .set('Authorization', `Bearer ${window.localStorage.getItem('token')}`);
     return this.http.post(`${this.baseUrl}/api/event`, body, { headers });

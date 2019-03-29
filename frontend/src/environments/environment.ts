@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl2: 'http://10.27.6.73:8080',
-  baseUrlLili: 'http://10.27.6.29:8080'
+  baseUrl2: 'http://hackathon.eu-west-3.elasticbeanstalk.com',
+  baseUrlLili: 'http://hackathon.eu-west-3.elasticbeanstalk.com'
 };
 
 /*
