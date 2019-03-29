@@ -9,7 +9,7 @@ jobs:
     steps:
       - checkout
       - run: 
-          name: Frontend build
+          name: Install dependencies
           command: |
             cd frontend && npm install
             
