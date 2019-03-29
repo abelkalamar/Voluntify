@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { EventService } from 'src/app/services/event.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { PersonalDataService } from 'src/app/services/personal-data.service';
 
@@ -16,7 +15,8 @@ export class SearchPeopleComponent implements OnInit {
 
   constructor(
     private http: HttpClient,
-    private userService: PersonalDataService
+    private userService: PersonalDataService,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -32,6 +32,10 @@ export class SearchPeopleComponent implements OnInit {
     //   .subscribe(result => {
     //     console.log(result);
     //   });
+  }
+
+  onCancel() {
+    this.router.navigate(['/comp/main']);
   }
 
 }
