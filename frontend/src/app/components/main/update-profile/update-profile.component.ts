@@ -10,9 +10,9 @@ import { PersonalDataService } from 'src/app/services/personal-data.service';
 })
 export class UpdateProfileComponent implements OnInit {
 
-  private profileDataForm: FormGroup;
-  private picturePath: string | ArrayBuffer;
-  private responseText;
+  profileDataForm: FormGroup;
+  picturePath: string | ArrayBuffer;
+  responseText;
 
   ngOnInit() {
     this.profileDataForm = new FormGroup({

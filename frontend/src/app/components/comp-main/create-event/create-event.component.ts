@@ -10,9 +10,9 @@ import { EventService } from 'src/app/services/event.service';
 })
 export class CreateEventComponent implements OnInit {
 
-  private eventData: FormGroup;
-  private picturePath: string | ArrayBuffer;
-  private responseText: string;
+  eventData: FormGroup;
+  picturePath: string | ArrayBuffer;
+  responseText: string;
 
   constructor(
     private router: Router,
