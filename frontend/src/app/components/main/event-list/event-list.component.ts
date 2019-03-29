@@ -50,10 +50,10 @@ export class EventListComponent implements OnInit {
         console.log(events['events']);
       });
     } else {
-      this.eventService.getUserEvents();
-      // .subscribe(events => {
-      //   console.log(events);
-      // });
+      this.eventService.getUserEvents()
+      .subscribe(events => {
+        console.log(events);
+      });
     }
   }
 
