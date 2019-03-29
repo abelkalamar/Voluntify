@@ -1,0 +1,16 @@
+<!-- this section wraps the team members as a container-->
+
+<section class="team-container">
+  <h1 class="team-h1">Meet the team</h1>
+
+    <!-- member-->  
+    <div class="team-member" *ngFor="let teammember of teammembers">
+      <img class="team-photo" src={{teammember.picture}}>
+      <h3>{{teammember.name}}</h3>
+      <span>{{teammember.title}}</span>
+      <div class= "social">
+        <a class="github" href="{{teammember.github}}"><i class="fab fa-github"></i></a>
+        <a class="linkedin" href="{{teammember.linkedin}}"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+ </section>

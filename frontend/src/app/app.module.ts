@@ -16,6 +16,7 @@ import { SearchPeopleComponent } from './components/comp-main/search-people/sear
 import { PersonDetailComponent } from './components/comp-main/person-detail/person-detail.component';
 import { CompMainComponent } from './components/comp-main/comp-main.component';
 import { NavbarComponent } from './components/main/navbar/navbar.component';
+import { ContactusComponent } from './components/main/contactus/contactus.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NavbarComponent } from './components/main/navbar/navbar.component';
     SearchPeopleComponent,
     PersonDetailComponent,
     NavbarComponent,
-    CompMainComponent
+    CompMainComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,
