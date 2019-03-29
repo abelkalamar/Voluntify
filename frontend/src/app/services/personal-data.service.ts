@@ -11,7 +11,8 @@ import { checkAndUpdateDirectiveDynamic } from '@angular/core/src/view/provider'
 })
 export class PersonalDataService {
 
-  baseUrl = environment.baseUrlLili;
+  baseUrl = environment.baseUrl2;
+  baseUrlLili = environment.baseUrlLili;
 
   constructor(
     private http: HttpClient,
@@ -19,19 +20,34 @@ export class PersonalDataService {
   ) { }
 
   sendUserData(userData): Observable<any> {
-    const addData = new FormData();
+    const body = {
+      firstName: userData.value.firstName,
+      lastName: userData.value.lastName,
+      mobileNumber: userData.value.mobileNumber,
+      profession: userData.value.profession,
+      age: userData.value.age,
+      isLooking: userData.value.isOpen
+    }
     // addData.append('firstName', userData.value.firstName);
     // addData.append('lastName', userData.value.lastName);
     // addData.append('mobileNumber', userData.value.mobileNumber);
     // addData.append('profession', userData.value.profession);
     // addData.append('age', userData.value.age);
     // addData.append('isLooking', userData.value.isOpen);
-    addData.append('profile', userData['files'][0]);
-    // console.log(addData);
+    // addData.append('file', userData['files'][0]);
+    // // console.log(addData);
     const headers: HttpHeaders = new HttpHeaders()
       .set('Content-Type', 'application/json')
       .set('Authorization', `Bearer ${window.localStorage.getItem('token')}`);
-    return this.http.post(`${this.baseUrl}/api/user/form`, addData, { headers });
+    return this.http.post(`${this.baseUrl}/api/user/form`, body, { headers });
+  }
+
+  sendPicture(picture) {
+    const userPicture = new FormData()
+    userPicture.append('file', picture);
+    const headers: HttpHeaders = new HttpHeaders()
+      .set('Authorization', `Bearer ${window.localStorage.getItem('token')}`);
+    return this.http.post(`${this.baseUrl}/api/uploadFile`, userPicture, { headers });
   }
 
   getPrefereces() {
@@ -55,7 +71,7 @@ export class PersonalDataService {
   getEmail(): Observable<string> {
     const headers: HttpHeaders = new HttpHeaders()
       .set('Authorization', `Bearer ${window.localStorage.getItem('token')}`);
-    return this.http.get<string>(`${this.baseUrl}/api/user/email`, { headers });
+    return this.http.get<string>(`${this.baseUrlLili}/api/user/email`, { headers });
   }
 
 }

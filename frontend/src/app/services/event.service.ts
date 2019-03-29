@@ -34,10 +34,10 @@ export class EventService {
     const headers: HttpHeaders = new HttpHeaders()
       .set('Authorization', `Bearer ${window.localStorage.getItem('token')}`);
     console.log('applied');
-    //return this.http.post(`${this.baseUrl}/api/event/id`, {id: id}, { headers } )
+    // return this.http.post(`${this.baseUrl}/api/event/id`, {id: id}, { headers } )
   }
 
-  createEvent(eventData):Observable<any> {
+  createEvent(eventData): Observable<any> {
     console.log('kay');
     const body = {
       type: 'Environmental',
@@ -46,7 +46,7 @@ export class EventService {
       address: eventData.address,
       start: eventData.start,
       finish: eventData.finish
-    }
+    };
     const headers: HttpHeaders = new HttpHeaders()
       .set('Authorization', `Bearer ${window.localStorage.getItem('token')}`);
     return this.http.post(`${this.baseUrl}/api/event`, body, { headers } );

@@ -12,6 +12,7 @@ export class CreateEventComponent implements OnInit {
 
   private eventData: FormGroup;
   private picturePath: string | ArrayBuffer;
+  private responseText: string;
 
   constructor(
     private router: Router,
@@ -43,10 +44,12 @@ export class CreateEventComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('ok');
     this.eventService.createEvent(this.eventData.value)
       .subscribe(result => {
-        console.log(result);
+        this.responseText = 'Your event is successfully created!';
+        setTimeout(() => {
+          this.onCancel();
+        }, 1500);
       });
   }
 

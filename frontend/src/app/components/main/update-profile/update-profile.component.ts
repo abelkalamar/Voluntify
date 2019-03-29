@@ -18,7 +18,6 @@ export class UpdateProfileComponent implements OnInit {
     this.profileDataForm = new FormGroup({
       'firstName': new FormControl(null),
       'lastName': new FormControl(null),
-      'picture': new FormControl(null),
       'age': new FormControl(0),
       'mobileNumber': new FormControl(null),
       'profession': new FormControl(null),
@@ -33,7 +32,7 @@ export class UpdateProfileComponent implements OnInit {
     private userService: PersonalDataService
   ) { }
 
-  onFileAdded(event):void {
+  onFileAdded(event): void {
     if (event.target.files && event.target.files[0]) {
       const file = event.target.files[0];
 
@@ -42,6 +41,12 @@ export class UpdateProfileComponent implements OnInit {
 
       reader.readAsDataURL(file);
     }
+
+    this.userService.sendPicture(event.target.files[0])
+      .subscribe(result => {
+        console.log(result);
+        window.localStorage.setItem('picUrl', result['fileDownloadUri'])
+      });
   }
 
   onCancel() {

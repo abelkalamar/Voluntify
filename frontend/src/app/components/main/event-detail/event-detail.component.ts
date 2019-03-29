@@ -17,7 +17,7 @@ export class EventDetailComponent implements OnInit {
   constructor(private router: Router, private eventService: EventService) {
     this.router.events.subscribe(value => {
       if (value instanceof NavigationEnd) {
-        this.eventId = parseInt(value.url.slice(19));
+        this.eventId = +(value.url.slice(19));
       }
     });
   }
@@ -30,7 +30,7 @@ export class EventDetailComponent implements OnInit {
 }
 
   ngOnInit() {
-    this.eventService.getEventById(this.eventId)
+    this.eventService.getEventById(this.eventId);
     // .subscribe(event => {
     // console.log(event);
     // })

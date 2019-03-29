@@ -29,7 +29,7 @@ export class RegisterComponent implements OnInit {
 
   onSubmit(confPassword: string) {
     if (confPassword !== this.signupForm.value['password']) {
-      return this.passwordError = 'Passwords don\'t match!'
+      return this.passwordError = 'Passwords don\'t match!';
     }
     this.logService.register(this.signupForm.value)
       .subscribe(data => {
